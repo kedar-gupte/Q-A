@@ -5,6 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * Problem statement :
+ * Given a complete binary tree, count the number of nodes.
+ *
+ */
+
 class Node<T> {
 
     Node(T data) {
