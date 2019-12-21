@@ -1,11 +1,16 @@
 package TreesAndGraphs;
 
+import Base.BaseExecutor;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Problem statement
+ *
+ * Longest Increasing Path in a Matrix
+ * https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/3072/
+ *
  * Given an integer matrix, find the length of the longest increasing path.
  *
  * From each cell, you can either move to four directions: left, right, up or down.
@@ -13,16 +18,16 @@ import java.util.Queue;
  *
  */
 
-class Point {
-    int x;
-    int y;
-    Point(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-}
+public class LongestIncreasingPath implements BaseExecutor {
 
-public class LongestIncreasingPath {
+    class Point {
+        int x;
+        int y;
+        Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
 
     int X, Y;
 
@@ -77,17 +82,22 @@ public class LongestIncreasingPath {
         return counts[i][j];
     }
 
+    @Override
+    public void execute() {
+
+        int[][] arr = {
+                {3,4,5},
+                {3,2,6},
+                {2,2,1}
+        };
+
+        System.out.println(longestIncreasinPath(arr));
+
+    }
 
     public static void main(String[] args) {
 
-        int[][] arr = {
-                            {3,4,5},
-                            {3,2,6},
-                            {2,2,1}
-                          };
-
-        LongestIncreasingPath obj = new LongestIncreasingPath();
-        System.out.println(obj.longestIncreasinPath(arr));
+        new LongestIncreasingPath().execute();
 
     }
 

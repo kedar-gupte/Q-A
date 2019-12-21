@@ -1,31 +1,36 @@
 package TreesAndGraphs;
 
+import Base.BaseExecutor;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 /**
- * Problem statement :
+ *
+ * Count Complete Tree Nodes
+ * https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/3071/
+ *
  * Given a complete binary tree, count the number of nodes.
  *
  */
 
-class Node<T> {
+public class TotalNodesInTree implements BaseExecutor {
 
-    Node(T data) {
-        this.data = data;
+    class Node<T> {
+
+        Node(T data) {
+            this.data = data;
+        }
+
+        void setChildNodes(List<Node<T>> list) {
+            this.childNodes = list;
+        }
+
+        T data;
+        List<Node<T>> childNodes = new ArrayList<Node<T>>();
     }
-
-    void setChildNodes(List<Node<T>> list) {
-        this.childNodes = list;
-    }
-
-    T data;
-    List<Node<T>> childNodes = new ArrayList<Node<T>>();
-}
-
-public class TotalNodesInTree {
 
     int count = 0;
 
@@ -65,8 +70,8 @@ public class TotalNodesInTree {
         return 1 + count;
     }
 
-
-    public static void main(String[] args) {
+    @Override
+    public void execute() {
 
         // Construct the tree
         Node root = new Node(1);
@@ -85,9 +90,14 @@ public class TotalNodesInTree {
         c11.setChildNodes(l2);
         root.setChildNodes(l1);
 
-        TotalNodesInTree obj = new TotalNodesInTree();
-        System.out.println(obj.countNodesBFS(root));
-        System.out.println(obj.countNodesDFS(root));
+        countNodesBFS(root);
+        countNodesDFS(root);
+    }
+
+    public static void main(String[] args) {
+
+        new TotalNodesInTree().execute();
 
     }
+
 }
