@@ -21,7 +21,7 @@ import java.util.Set;
  * The order of keys used matters.
  *
  * In this case the third rule is relaxed and only immediate surrounding 8 elements can be used.
- * 
+ *
  */
 
 public class AndroidLockPattern implements BaseExecutor {
