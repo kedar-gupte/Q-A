@@ -5,6 +5,18 @@ import Base.BaseExecutor;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Minimum Window Substring
+ * https://leetcode.com/explore/interview/card/google/59/array-and-strings/345/
+ *
+ * Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+ *
+ * Example:
+ *
+ * Input: S = "ADOBECODEBANC", T = "ABC"
+ * Output: "BANC"
+ *
+ */
 public class MinimumWindow implements BaseExecutor {
 
     public String minWindow(String s, String t) {
