@@ -2,7 +2,10 @@ package Base.ArraysString;
 
 import Base.BaseExecutor;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Jump Game
@@ -87,6 +90,8 @@ public class JumpGame implements BaseExecutor {
             }
 
         }
+
+        List<Integer> list= new ArrayList<>();
 
         return lastPosition == 0;
 
