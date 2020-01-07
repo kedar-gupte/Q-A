@@ -20,7 +20,7 @@ import java.util.List;
  *   "()(())",
  *   "()()()"
  * ]
- * 
+ *
  */
 public class GenerateParanthesis implements BaseExecutor {
 
