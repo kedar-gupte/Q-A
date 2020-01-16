@@ -73,7 +73,7 @@ public class MakeNetworkConnected implements BaseExecutor {
 
         int[][] nums1 = {{0,1},{0,2},{0,3},{1,2}};
         System.out.println(makeConnected(6, nums1));
-        
+
         int[][] nums2 = {{0,1},{0,2},{0,3},{1,2},{1,3}};
         System.out.println(makeConnected(6, nums2));
 
