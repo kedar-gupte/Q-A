@@ -4,6 +4,7 @@ import Base.BaseExecutor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -68,7 +69,7 @@ public class TextJustification implements BaseExecutor {
     String align(List<String> list, int len, int maxWidth, boolean lastLine) {
 
         int size = (list.size() > 1) ? list.size() - 1 : 1;
-        
+
         int space = (maxWidth - len)/size;
         int rem = (maxWidth - len)%size;
 
