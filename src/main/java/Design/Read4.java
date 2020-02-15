@@ -29,7 +29,7 @@ public class Read4 {
         return i;
 
     }
-    
+
     Integer read4(char[] buffer) {
         return null;
     }
