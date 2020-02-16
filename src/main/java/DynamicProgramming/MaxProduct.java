@@ -4,17 +4,21 @@ import Base.BaseExecutor;
 
 public class MaxProduct implements BaseExecutor {
 
+
+    int minProduct;
+    int maxProduct;
+
     public int maxProduct(int[] nums) {
         // Iterate over the array while maintaining min and max product variables
 
-        int minProduct = nums[0];
-        int maxProduct = nums[0];
         int result = nums[0];
+        minProduct = nums[0];
+        maxProduct = nums[0];
 
         for(int i = 1; i < nums.length; i++){
 
             if(nums[i] < 0) {
-                swap(minProduct, maxProduct);
+                swap();
             }
 
             minProduct = Math.min(nums[i] * minProduct, nums[i]);
@@ -26,10 +30,10 @@ public class MaxProduct implements BaseExecutor {
         return result;
     }
 
-    void swap(int x, int y) {
-        int temp = x;
-        x = y;
-        y = temp;
+    void swap() {
+        int temp = minProduct;
+        minProduct = maxProduct;
+        maxProduct = temp;
     }
 
     @Override
